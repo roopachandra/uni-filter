@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% load staticfiles %}
+<link href="{% static 'detail/css/detail.css' %}" rel="stylesheet"></head>
+<body class="app">
+  <header>
+    <div class="logo">
+      <span class="app-name">University Advisor</span>
+      <em class="slogan">choose yout future</em>
+    </div>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../results" class="active">Courses</a>
+      <a href="">Contact us</a>
+    </nav>
+  </header>
+  <div class="content">
+    <h1 class="title text-center">Abertay University</h1>
+    <h2 class="sub-title text-center">the United States</h2>
+    <div class="program-wrap">
+      <div class="program-item">
+        <a href="#Program-1" class="program-title">Program 1</a>
+        <p>In response to industry demand we continue to offer general engineering teaching to all students in the first two years
+        of study. Engineering is one of the most satisfying professions. You get results. You make things happen. You generate
+        new, logical solutions to other people’s problems and at the end of the day, you have the job satisfaction of being
+        able to see your work in action.</p>
+      </div>
+      <div class="program-item">
+        <a href="#Program-2" class="program-title">Program 2</a>
+        <p>Engineering is an intellectually demanding profession, mainly because of the wide range of skills you need to deploy.
+        You are expected to be good at mathematics, have a sound grasp of basic sciences, be inventive and creative, be able to
+        sell your ideas to clients and colleagues and, in due course, organise and lead fellow professionals.</p>
+        <p>The BEng is a four-year Honours programme and the MEng is a five-year Honours programme, both of which are fully
+        accredited by the Engineering Institutions (see Professional Accreditation section).</p>
+      </div>
+    </div>
+    <button class="btn back-btn">back to search</button>
+  </div>
+  <footer>University Advisor © 2019</footer>
+  <script src="{% static 'detail/js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'detail/js/detail.js' %}"></script></body>
+</html>

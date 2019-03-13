@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>university</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  {% load staticfiles %}
+<link href="{% static 'list/css/list.css' %}" rel="stylesheet"></head>
+<body class="app">
+  <header>
+    <div class="logo">
+      <span class="app-name">University Advisor</span>
+      <em class="slogan">choose yout future</em>
+    </div>
+    <nav>
+      <a href="../">Home</a>
+      <a href="./" class="active">Courses</a>
+      <a href="">Contact us</a>
+    </nav>
+  </header>
+  <div class="content">
+    <div class="statistics">
+      <h2>Viewing providers</h2>
+      <p>1299 courses from 145 providers</p>
+    </div>
+    <div class="operation-wrap">
+      <button class="btn j-expand-all">EXPAND ALL</button>
+      <button class="btn j-collapse-all">COLLAPSE ALL</button>
+    </div>
+    <div class="school-list">
+      <div class="school-item show-program">
+        <div class="school-name">University of Aberdeen</div>
+        <ul class="program-list">
+          <li class="program-item">
+            <a href="../details" class="program-name">Engineering</a>
+            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
+          </li>
+          <li class="program-item">
+            <a href="../details" class="program-name">Engineering</a>
+            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
+          </li>
+          <li class="program-item">
+            <a href="../details" class="program-name">Chemical Engineering</a>
+            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
+          </li>
+        </ul>
+      </div>
+      <div class="school-item show-program">
+        <div class="school-name">University of Aberdeen</div>
+        <ul class="program-list">
+          <li class="program-item">
+            <a href="../details" class="program-name">Engineering</a>
+            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
+          </li>
+          <li class="program-item">
+            <a href="../details" class="program-name">Engineering</a>
+            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
+          </li>
+          <li class="program-item">
+            <a href="../details" class="program-name">Chemical Engineering</a>
+            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
+          </li>
+        </ul>
+      </div>
+      <div class="school-item show-program">
+        <div class="school-name">University of Aberdeen</div>
+        <ul class="program-list">
+          <li class="program-item">
+            <a href="../details" class="program-name">Engineering</a>
+            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
+          </li>
+          <li class="program-item">
+            <a href="../details" class="program-name">Engineering</a>
+            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
+          </li>
+          <li class="program-item">
+            <a href="../details" class="program-name">Chemical Engineering</a>
+            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pager">
+      <ul class="pagination">
+        <li class="pagination-item"><a href="" class="pagination-link pagination-link-first iconfont icon-first"></a></li>
+        <li class="pagination-item"><a href="" class="pagination-link pagination-link-prev iconfont icon-prev"></a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">1</a></li>
+        <li class="pagination-item active"><a href="" class="pagination-link">2</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">3</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">4</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">5</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link">6</a></li>
+        <li class="pagination-item"><a href="" class="pagination-link pagination-link-next iconfont icon-next"></a></li>
+        <li class="pagination-item"><a href="" class="pagination-link pagination-link-last iconfont icon-last"></a></li>
+      </ul>
+    </div>
+  </div>
+  <footer>University Advisor © 2019</footer>
+  <script src="{% static 'list/js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'list/js/list.js' %}"></script></body>
