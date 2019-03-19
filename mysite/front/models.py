@@ -33,6 +33,6 @@ class Institution(models.Model):
 	APROutcome = models.CharField(max_length = 255)
 	TEFOutcome = models.CharField(max_length = 255)
 
-	#def __str__(self):
-		#return self.PUBUKPRN
+	def __unicode__(self):
+		return self.PUBUKPRN
 
