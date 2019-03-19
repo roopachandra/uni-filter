@@ -28,7 +28,16 @@
       <button class="btn j-expand-all">EXPAND ALL</button>
       <button class="btn j-collapse-all">COLLAPSE ALL</button>
     </div>
-    <div class="school-list">
+      {% if filtered_institutions %}
+      <ul>
+      {% for institution in filtered_institutions %}
+          <li><a href="/{{ institution.id }}/detail/">{{ institution.PUBUKPRN }}</a></li>
+      {% endfor %}
+      </ul>
+      {% else %}
+        <p>No institutions are available.</p>
+      {% endif %}
+    <!--div class="school-list">
       <div class="school-item show-program">
         <div class="school-name">University of Aberdeen</div>
         <ul class="program-list">
@@ -80,7 +89,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div-->
     <div class="pager">
       <ul class="pagination">
         <li class="pagination-item"><a href="" class="pagination-link pagination-link-first iconfont icon-first"></a></li>

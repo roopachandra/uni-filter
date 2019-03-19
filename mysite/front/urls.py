@@ -1,6 +1,18 @@
 from django.conf.urls import url
-from . import views
+from front import views
+
+
+#urlpatterns = [
+    #url(r'^$', views.index, name = 'index'),
+    #url(r'^/detail/$', views.detail, name = 'detail')
+#]
+
 
 urlpatterns = [
-    url(r'^$', views.index, name = 'index')
+    url(r'^(?P<institution_id>\d+)/detail/$', views.detail, name='detail'),
+    url(r'^results/$', views.results, name='results'),
+    url(r'^$', views.index, name='index'),
+
+    #url(r'^/detail/$', views.detail, name='detail')
+    # ... your url patterns
 ]
