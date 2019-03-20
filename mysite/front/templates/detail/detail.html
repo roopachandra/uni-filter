@@ -21,14 +21,15 @@
     </nav>
   </header>
   <div class="content">
-    <h1 class="title text-center">Abertay University</h1>
-    <h2 class="sub-title text-center">{{institution.Country}}</h2>
-    <h2 class="text-center">PUKUKPRN: {{institution.PUBUKPRN}}</h2>
-    <h2 class="text-center">APR Outcome: {{institution.APROutcome}}</h2>
-    <h2 class="text-center">TEFOutcome: {{institution.TEFOutcome}}</h2>
+    <h1 class="title text-center">{{institution.university_name}}</h1>
+    <h2 class="sub-title text-center">Location: {{institution.Country}}</h2>
+    <h2 class="text-center">Tuition: {{institution.tuition}}</h2>
+    <h2 class="text-center">Number of Students: {{institution.num_students}}</h2>
 
-
-    <div class="program-wrap">
+    <div class = "program-wrap">
+      {{institution.description}}
+    </div>
+    <!--div class="program-wrap">
       <div class="program-item">
         <a href="#Program-1" class="program-title">Program 1</a>
         <p>In response to industry demand we continue to offer general engineering teaching to all students in the first two years
@@ -44,7 +45,7 @@
         <p>The BEng is a four-year Honours programme and the MEng is a five-year Honours programme, both of which are fully
         accredited by the Engineering Institutions (see Professional Accreditation section).</p>
       </div>
-    </div>
+    </div-->
     <button class="btn back-btn">back to search</button>
   </div>
   <footer>University Advisor © 2019</footer>

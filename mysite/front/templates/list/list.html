@@ -31,7 +31,7 @@
       {% if filtered_institutions %}
       <ul>
       {% for institution in filtered_institutions %}
-          <li><a href="/{{ institution.id }}/detail/">{{ institution.PUBUKPRN }}</a></li>
+          <li><a href="/{{ institution.id }}/detail/">{{ institution.university_name }}</a></li>
       {% endfor %}
       </ul>
       {% else %}

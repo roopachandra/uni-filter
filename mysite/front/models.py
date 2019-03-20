@@ -20,19 +20,30 @@ def validate_pubukprn(value):
             params={'value': value},
         )
 
+
+def validate_students(value):
+	if value <= 0:
+		raise ValidationError(
+            _('%(value)s is too small'),
+            params={'value': value},
+        )
+
 class Institution(models.Model):
 	COUNTRY_CHOICES = (
-	    ('XF', 'England'),
-	    ('XI', 'Wales'),
-	    ('NI', 'NI'),
-	    ('XH', 'Scotland'),
+	    ('UK', 'United Kingdom'),
+	    ('US', 'United States'),
 	)
-	Country = models.CharField(max_length=2, choices=COUNTRY_CHOICES,default='XF')
-	PUBUKPRN = models.IntegerField(validators=[validate_pubukprn])
-
-	APROutcome = models.CharField(max_length = 255)
-	TEFOutcome = models.CharField(max_length = 255)
+	university_name = models.CharField(max_length=255)
+	Country = models.CharField(max_length=2, choices=COUNTRY_CHOICES,default='US')
+	num_students = models.IntegerField(validators=[validate_students])
+	description = models.TextField(default='')
+	tuition = models.IntegerField()
+	
+	#old database columns
+	#PUBUKPRN = models.IntegerField(validators=[validate_pubukprn])
+	#APROutcome = models.CharField(max_length = 255)
+	#TEFOutcome = models.CharField(max_length = 255)
 
 	def __unicode__(self):
-		return self.PUBUKPRN
+		return "%s" % (self.university_name)
 
