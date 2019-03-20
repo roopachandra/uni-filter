@@ -29,10 +29,9 @@ class Institution(models.Model):
 	)
 	Country = models.CharField(max_length=2, choices=COUNTRY_CHOICES,default='XF')
 	PUBUKPRN = models.IntegerField(validators=[validate_pubukprn])
-
+	Name = models.CharField(max_length = 255)
 	APROutcome = models.CharField(max_length = 255)
 	TEFOutcome = models.CharField(max_length = 255)
 
 	def __unicode__(self):
 		return self.PUBUKPRN
-

@@ -15,13 +15,13 @@
       <em class="slogan">choose yout future</em>
     </div>
     <nav>
-      <a href="../">Home</a>
-      <a href="../results" class="active">Courses</a>
+      <a href="../../">Home</a>
+      <a href="../../results" class="active">Courses</a>
       <a href="">Contact us</a>
     </nav>
   </header>
   <div class="content">
-    <h1 class="title text-center">Abertay University</h1>
+    <h1 class="title text-center">{{institution.Name}}</h1>
     <h2 class="sub-title text-center">{{institution.Country}}</h2>
     <h2 class="text-center">PUKUKPRN: {{institution.PUBUKPRN}}</h2>
     <h2 class="text-center">APR Outcome: {{institution.APROutcome}}</h2>
@@ -45,7 +45,9 @@
         accredited by the Engineering Institutions (see Professional Accreditation section).</p>
       </div>
     </div>
-    <button class="btn back-btn">back to search</button>
+    <a href="../../results">
+    <button class="btn back-btn" >back to search</button>
+    </a>
   </div>
   <footer>University Advisor © 2019</footer>
   <script src="{% static 'detail/js/jquery.js' %}"></script>
