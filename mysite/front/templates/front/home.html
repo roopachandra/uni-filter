@@ -14,7 +14,7 @@
     </div>
     <nav>
       <a href="./" class="active">Home</a>
-      <a href="./results">Courses</a>
+      <a href="./all/all/all/results">Courses</a>
       <a href="">Contact us</a>
     </nav>
   </header>
@@ -22,9 +22,14 @@
     <h1 class="title text-center">EXPLORE YOUR OPTIONS...</h1>
     <div class="text-center select-wrap">
       <label for="">SEARCH CRITERIA:</label>
-      <button class="select-btn" data-jq-dropdown="#jq-dropdown-1">location</button>
-      <button class="select-btn" data-jq-dropdown="#jq-dropdown-2">degree level</button>
-      <button class="select-btn" data-jq-dropdown="#jq-dropdown-3">subject</button>
+      <!--<button class="select-btn" data-jq-dropdown="#jq-dropdown-1">location</button>-->
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="Submit">
+      </form>
+      <!--<button class="select-btn" data-jq-dropdown="#jq-dropdown-2">degree level</button>
+      <button class="select-btn" data-jq-dropdown="#jq-dropdown-3">subject</button>-->
     </div>
     <div class="text-center select-wrap">
       <label for="">OPTIONAL CRITERIA:</label>
@@ -99,7 +104,7 @@
       </ul>
     </div>
     <div class="text-center">
-      <a href="./results" class="btn submit-btn">submit</a>
+      <a href="./" class="btn submit-btn">submit</a>
     </div>
   </div>
   <footer>University Advisor © 2019</footer>

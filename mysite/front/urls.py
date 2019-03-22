@@ -10,7 +10,7 @@ from front import views
 
 urlpatterns = [
     url(r'^(?P<institution_id>\d+)/detail/$', views.detail, name='detail'),
-    url(r'^results/$', views.results, name='results'),
+    url(r'^(\D+)/(\D+)/(\D+)/results/$', views.results, name='results'),
     url(r'^$', views.index, name='index'),
 
     #url(r'^/detail/$', views.detail, name='detail')
