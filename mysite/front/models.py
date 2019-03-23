@@ -34,7 +34,7 @@ class Institution(models.Model):
 	    ('US', 'United States'),
 	)
 	university_name = models.CharField(max_length=255)
-	Country = models.CharField(max_length=2, choices=COUNTRY_CHOICES,default='US')
+	country = models.CharField(max_length=2, choices=COUNTRY_CHOICES,default='US')
 	num_students = models.IntegerField(validators=[validate_students])
 	description = models.TextField(default='')
 	tuition = models.IntegerField()
