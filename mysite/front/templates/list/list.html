@@ -16,21 +16,15 @@
         <em class="slogan">choose your future</em>
       </div>
       <nav class="side-nav">
-        <a href="../../../../">Home</a>
-        <a href="../../../../all/all/all/results" class="active">Courses</a>
-        <a href="">Contact us</a>
+        <a href="">Home</a>
+        <a href="" class="active">Courses</a>
       </nav>
       <i class="iconfont icon-menu j-menu-btn menu-btn"></i>
-    </div>
-    <div class="hide-nav j-hide-nav">
-      <a href="../../../../">Home</a>
-      <a href="../../../../all/all/all/results" class="active">Courses</a>
-      <a href="">Contact us</a>
     </div>
   </header>
   <div class="content">
     <div class="statistics">
-      <h2>Viewing providers</h2>
+      <h2>Viewing Providers</h2>
       <div>
         {% if filtered_institutions.count == 1 %}
         <p>{{filtered_institutions.count}} Result </p>
@@ -39,9 +33,10 @@
         {% endif %}
       </div>
     </div>
+    <div class="content">
+    <button class="btn back-btn" onclick="javascript:history.go(-1);">Back to search</button>
+    </div>
     <div class="operation-wrap">
-      <button class="btn j-expand-all">EXPAND ALL</button>
-      <button class="btn j-collapse-all">COLLAPSE ALL</button>
     </div>
       {% if filtered_institutions %}
       <ul class="school-list">
@@ -105,9 +100,6 @@
         </ul>
       </div>
     </div-->
-  </div>
-  <div class="content">
-    <button class="btn back-btn">Back to search</button>
   </div>
   <footer>University Advisor © 2019</footer>
   <script type="text/javascript" src="{% static 'lib/jquery.js' %}"></script>
