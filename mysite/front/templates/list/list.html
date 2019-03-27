@@ -22,7 +22,13 @@
   <div class="content">
     <div class="statistics">
       <h2>Viewing providers</h2>
-      <p>1962 courses from 145 providers</p>
+      <div>
+        {% if filtered_institutions.count == 1 %}
+        <p>{{filtered_institutions.count}} Result </p>
+        {% else %}
+        <p>{{filtered_institutions.count}} Results </p>
+        {% endif %}
+      </div>
     </div>
     <div class="operation-wrap">
       <button class="btn j-expand-all">EXPAND ALL</button>
@@ -90,20 +96,9 @@
         </ul>
       </div>
     </div-->
-    <div class="pager">
-      <ul class="pagination">
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-first iconfont icon-first"></a></li>
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-prev iconfont icon-prev"></a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">1</a></li>
-        <li class="pagination-item active"><a href="" class="pagination-link">2</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">3</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">4</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">5</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">6</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-next iconfont icon-next"></a></li>
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-last iconfont icon-last"></a></li>
-      </ul>
-    </div>
+  </div>
+  <div class="content">
+    <button class="btn back-btn">Back to search</button>
   </div>
   <footer>University Advisor © 2019</footer>
   <script src="{% static 'list/js/jquery.js' %}"></script>
