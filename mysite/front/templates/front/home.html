@@ -5,109 +5,39 @@
   <title>Home</title>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
   {% load staticfiles %}
-<link href="{% static 'front/css/front.css' %}" rel="stylesheet"></head>
+  <script type="text/javascript" src="{% static 'lib/flexible.js' %}"></script>
+  <link href="{% static 'front/css/front.css' %}" rel="stylesheet"></head>
 <body class="app">
   <header>
-    <div class="logo">
-      <span class="app-name">University Advisor</span>
-      <em class="slogan">choose your future</em>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="app-name">University Advisor</span>
+        <em class="slogan">choose your future</em>
+      </div>
+      <nav class="side-nav">
+        <a href="./" class="active">Home</a>
+        <a href="./all/all/all/results">Courses</a>
+        <a href="">Contact us</a>
+      </nav>
+      <i class="iconfont icon-menu j-menu-btn menu-btn"></i>
     </div>
-    <nav>
+    <div class="hide-nav j-hide-nav">
       <a href="./" class="active">Home</a>
       <a href="./all/all/all/results">Courses</a>
       <a href="">Contact us</a>
-    </nav>
+    </div>
   </header>
   <div class="content">
     <h1 class="title text-center">EXPLORE YOUR OPTIONS...</h1>
     <div class="text-center select-wrap">
-      <label for="">SEARCH CRITERIA:</label>
-      <!--<button class="select-btn" data-jq-dropdown="#jq-dropdown-1">location</button>-->
       <form action="" method="post">
         {% csrf_token %}
         {{ form.as_ul }}
         <input type="submit" value="Submit">
       </form>
-      <!--<button class="select-btn" data-jq-dropdown="#jq-dropdown-2">degree level</button>
-      <button class="select-btn" data-jq-dropdown="#jq-dropdown-3">subject</button>-->
-    </div>
-    <div class="text-center select-wrap">
-      <label for="">OPTIONAL CRITERIA:</label>
-      <button class="select-btn" data-jq-dropdown="#jq-dropdown-4">graduation rate</button>
-      <button class="select-btn" data-jq-dropdown="#jq-dropdown-5">degree level</button>
-      <button class="select-btn" data-jq-dropdown="#jq-dropdown-6">degree level</button>
-    </div>
-    <div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip">
-      <ul class="jq-dropdown-menu">
-        <li><a href="#1">Item 1</a></li>
-        <li><a href="#2">Item 2</a></li>
-        <li><a href="#3">Item 3</a></li>
-        <li class="jq-dropdown-divider"></li>
-        <li><a href="#4">Item 4</a></li>
-        <li><a href="#5">Item 5</a></li>
-        <li><a href="#5">Item 6</a></li>
-      </ul>
-    </div>
-    <div id="jq-dropdown-2" class="jq-dropdown jq-dropdown-tip">
-      <ul class="jq-dropdown-menu">
-        <li><a href="#1">Item 1</a></li>
-        <li><a href="#2">Item 2</a></li>
-        <li><a href="#3">Item 3</a></li>
-        <li class="jq-dropdown-divider"></li>
-        <li><a href="#4">Item 4</a></li>
-        <li><a href="#5">Item 5</a></li>
-        <li><a href="#5">Item 6</a></li>
-      </ul>
-    </div>
-    <div id="jq-dropdown-3" class="jq-dropdown jq-dropdown-tip">
-      <ul class="jq-dropdown-menu">
-        <li><a href="#1">Item 1</a></li>
-        <li><a href="#2">Item 2</a></li>
-        <li><a href="#3">Item 3</a></li>
-        <li class="jq-dropdown-divider"></li>
-        <li><a href="#4">Item 4</a></li>
-        <li><a href="#5">Item 5</a></li>
-        <li><a href="#5">Item 6</a></li>
-      </ul>
-    </div>
-    <div id="jq-dropdown-4" class="jq-dropdown jq-dropdown-tip">
-      <ul class="jq-dropdown-menu">
-        <li><a href="#1">Item 1</a></li>
-        <li><a href="#2">Item 2</a></li>
-        <li><a href="#3">Item 3</a></li>
-        <li class="jq-dropdown-divider"></li>
-        <li><a href="#4">Item 4</a></li>
-        <li><a href="#5">Item 5</a></li>
-        <li><a href="#5">Item 6</a></li>
-      </ul>
-    </div>
-    <div id="jq-dropdown-5" class="jq-dropdown jq-dropdown-tip">
-      <ul class="jq-dropdown-menu">
-        <li><a href="#1">Item 1</a></li>
-        <li><a href="#2">Item 2</a></li>
-        <li><a href="#3">Item 3</a></li>
-        <li class="jq-dropdown-divider"></li>
-        <li><a href="#4">Item 4</a></li>
-        <li><a href="#5">Item 5</a></li>
-        <li><a href="#5">Item 6</a></li>
-      </ul>
-    </div>
-    <div id="jq-dropdown-6" class="jq-dropdown jq-dropdown-tip">
-      <ul class="jq-dropdown-menu">
-        <li><a href="#1">Item 1</a></li>
-        <li><a href="#2">Item 2</a></li>
-        <li><a href="#3">Item 3</a></li>
-        <li class="jq-dropdown-divider"></li>
-        <li><a href="#4">Item 4</a></li>
-        <li><a href="#5">Item 5</a></li>
-        <li><a href="#5">Item 6</a></li>
-      </ul>
-    </div>
-    <div class="text-center">
-      <a href="./" class="btn submit-btn">submit</a>
     </div>
   </div>
   <footer>University Advisor © 2019</footer>
-  <script src="{% static 'front/js/jquery.js' %}"></script>
+  <script type="text/javascript" src="{% static 'lib/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'front/js/index.js' %}"></script></body>
 </html>
