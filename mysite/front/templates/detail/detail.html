@@ -17,29 +17,23 @@
         <em class="slogan">choose your future</em>
       </div>
       <nav class="side-nav">
-        <a href="../../">Home</a>
-        <a href="../../all/all/all/results" class="active">Courses</a>
-        <a href="">Contact us</a>
+        <a href="">Home</a>
+        <a href="" class="active">Courses</a>
       </nav>
       <i class="iconfont icon-menu j-menu-btn menu-btn"></i>
-    </div>
-    <div class="hide-nav j-hide-nav">
-      <a href="../../">Home</a>
-      <a href="../../all/all/all/results" class="active">Courses</a>
-      <a href="">Contact us</a>
     </div>
   </header>
   <div class="content">
     <h1 class="title text-center">{{institution.university_name}}</h1>
     <h2 class="sub-title text-center">
-      <span>Location: {{institution.Country}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>Location: {{institution.country}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
       <span>Tuition: {{institution.tuition}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
       <span>Number of Students: {{institution.num_students}}</span>
     </h2>
     <div class="program-wrap">
       {{institution.description}}
     </div>
-    <button class="btn back-btn">back to search</button>
+    <button class="btn back-btn" onclick="javascript:history.go(-1)">back to search</button>
   </div>
   <footer>University Advisor © 2019</footer>
   <script type="text/javascript" src="{% static 'lib/jquery.js' %}"></script>

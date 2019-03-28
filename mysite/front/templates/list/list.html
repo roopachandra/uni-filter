@@ -16,19 +16,28 @@
         <em class="slogan">choose your future</em>
       </div>
       <nav class="side-nav">
-        <a href="../../../../">Home</a>
-        <a href="../../../../all/all/all/results" class="active">Courses</a>
-        <a href="">Contact us</a>
+        <a href="">Home</a>
+        <a href="" class="active">Courses</a>
       </nav>
       <i class="iconfont icon-menu j-menu-btn menu-btn"></i>
     </div>
-    <div class="hide-nav j-hide-nav">
-      <a href="../../../../">Home</a>
-      <a href="../../../../all/all/all/results" class="active">Courses</a>
-      <a href="">Contact us</a>
-    </div>
   </header>
   <div class="content">
+    <div class="statistics">
+      <h2>Viewing Providers</h2>
+      <div>
+        {% if filtered_institutions.count == 1 %}
+        <p>{{filtered_institutions.count}} Result </p>
+        {% else %}
+        <p>{{filtered_institutions.count}} Results </p>
+        {% endif %}
+      </div>
+    </div>
+    <div class="content">
+    <button class="btn back-btn" onclick="javascript:history.go(-1);">Back to search</button>
+    </div>
+    <div class="operation-wrap">
+    </div>
       {% if filtered_institutions %}
       <ul class="school-list">
       {% for institution in filtered_institutions %}
@@ -38,21 +47,6 @@
       {% else %}
         <p>No institutions are available.</p>
       {% endif %}
-    <div class="pager">
-      <ul class="pagination">
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-first iconfont icon-first"></a></li>
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-prev iconfont icon-prev"></a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">1</a></li>
-        <li class="pagination-item active"><a href="" class="pagination-link">2</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">3</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">4</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">5</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link">6</a></li>
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-next iconfont icon-next"></a></li>
-        <li class="pagination-item"><a href="" class="pagination-link pagination-link-last iconfont icon-last"></a></li>
-      </ul>
-    </div>
-  </div>
   <footer>University Advisor © 2019</footer>
   <script type="text/javascript" src="{% static 'lib/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'list/js/list.js' %}"></script></body>

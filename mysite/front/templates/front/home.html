@@ -16,15 +16,9 @@
       </div>
       <nav class="side-nav">
         <a href="./" class="active">Home</a>
-        <a href="./all/all/all/results">Courses</a>
-        <a href="">Contact us</a>
+        <a href="">Courses</a>
       </nav>
       <i class="iconfont icon-menu j-menu-btn menu-btn"></i>
-    </div>
-    <div class="hide-nav j-hide-nav">
-      <a href="./" class="active">Home</a>
-      <a href="./all/all/all/results">Courses</a>
-      <a href="">Contact us</a>
     </div>
   </header>
   <div class="content">
@@ -32,7 +26,7 @@
     <div class="text-center select-wrap">
       <form action="" method="post">
         {% csrf_token %}
-        {{ form.as_ul }}
+        {{ form.as_p }}
         <input type="submit" value="Submit">
       </form>
     </div>
