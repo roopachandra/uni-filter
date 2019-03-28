@@ -29,14 +29,6 @@
     </div>
   </header>
   <div class="content">
-    <div class="statistics">
-      <h2>Viewing providers</h2>
-      <p>1962 courses from 145 providers</p>
-    </div>
-    <div class="operation-wrap">
-      <button class="btn j-expand-all">EXPAND ALL</button>
-      <button class="btn j-collapse-all">COLLAPSE ALL</button>
-    </div>
       {% if filtered_institutions %}
       <ul class="school-list">
       {% for institution in filtered_institutions %}
@@ -46,59 +38,6 @@
       {% else %}
         <p>No institutions are available.</p>
       {% endif %}
-    <!--div class="school-list">
-      <div class="school-item show-program">
-        <div class="school-name">University of Aberdeen</div>
-        <ul class="program-list">
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Chemical Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-        </ul>
-      </div>
-      <div class="school-item show-program">
-        <div class="school-name">University of Aberdeen</div>
-        <ul class="program-list">
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Chemical Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-        </ul>
-      </div>
-      <div class="school-item show-program">
-        <div class="school-name">University of Aberdeen</div>
-        <ul class="program-list">
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Chemical Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-        </ul>
-      </div>
-    </div-->
     <div class="pager">
       <ul class="pagination">
         <li class="pagination-item"><a href="" class="pagination-link pagination-link-first iconfont icon-first"></a></li>
