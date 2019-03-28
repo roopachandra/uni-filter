@@ -376,18 +376,19 @@ body {
 .select-wrap label {
   font-weight: 600;
   font-size: 0.3125rem;
-  width: 2.34375rem;
+  width: 3.5rem;
   display: inline-block;
-  text-align: left;
+  text-align: right;
   line-height: 0.6875rem;
+  margin-right: 0.5rem;
 }
 
-.select-wrap form li {
+.select-wrap form p {
   list-style: none;
   margin-top: 0.3125rem;
 }
 
-.select-wrap form li select {
+.select-wrap form select {
   cursor: pointer;
   width: 3.125rem;
   height: 0.6875rem;
@@ -397,7 +398,7 @@ body {
   font-size: 0.28125rem;
 }
 
-.select-wrap form li select:hover {
+.select-wrap form select:hover {
   color: #fff;
   background: #000;
 }
