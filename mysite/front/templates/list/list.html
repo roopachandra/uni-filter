@@ -38,62 +38,15 @@
     </div>
     <div class="operation-wrap">
     </div>
-
-    <!--div class="school-list">
-      <div class="school-item show-program">
-        <div class="school-name">University of Aberdeen</div>
-        <ul class="program-list">
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Chemical Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-        </ul>
-      </div>
-      <div class="school-item show-program">
-        <div class="school-name">University of Aberdeen</div>
-        <ul class="program-list">
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Chemical Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-        </ul>
-      </div>
-      <div class="school-item show-program">
-        <div class="school-name">University of Aberdeen</div>
-        <ul class="program-list">
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Engineering</a>
-            <p class="program-desc">Master of Engineering(with Honours)-MEng(Hon)</p>
-          </li>
-          <li class="program-item">
-            <a href="../details" class="program-name">Chemical Engineering</a>
-            <p class="program-desc">Bachelor of Engineering(with Honours)-BEng(Hon)</p>
-          </li>
-        </ul>
-      </div>
-    </div-->
-
-  </div>
+      {% if filtered_institutions %}
+      <ul class="school-list">
+      {% for institution in filtered_institutions %}
+          <li class="school-name"><a href="/{{ institution.id }}/detail/">{{ institution.university_name }}</a></li>
+      {% endfor %}
+      </ul>
+      {% else %}
+        <p>No institutions are available.</p>
+      {% endif %}
   <footer>University Advisor © 2019</footer>
   <script type="text/javascript" src="{% static 'lib/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'list/js/list.js' %}"></script></body>
