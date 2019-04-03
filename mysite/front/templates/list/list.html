@@ -33,20 +33,17 @@
         {% endif %}
       </div>
     </div>
-    <div class="content">
+    {% if filtered_institutions %}
+    <ul class="school-list">
+    {% for institution in filtered_institutions %}
+        <li class="school-name"><a href="/{{ institution.id }}/detail/">{{ institution.university_name }}</a></li>
+    {% endfor %}
+    </ul>
+    {% else %}
+      <p>No institutions are available.</p>
+    {% endif %}
     <button class="btn back-btn" href="javascript:history.back();">Back to search</button>
-    </div>
-    <div class="operation-wrap">
-    </div>
-      {% if filtered_institutions %}
-      <ul class="school-list">
-      {% for institution in filtered_institutions %}
-          <li class="school-name"><a href="/{{ institution.id }}/detail/">{{ institution.university_name }}</a></li>
-      {% endfor %}
-      </ul>
-      {% else %}
-        <p>No institutions are available.</p>
-      {% endif %}
+  </div>
   <footer>University Advisor © 2019</footer>
   <script type="text/javascript" src="{% static 'lib/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'list/js/list.js' %}"></script></body>
